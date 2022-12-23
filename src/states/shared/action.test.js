@@ -15,7 +15,7 @@ const fakeTalksResponse = [
   {
     id: 'talk-1',
     text: 'Talk Test 1',
-    user: 'user-1',
+    user: 'user-1jhgjhgg',
     replyTo: '',
     likes: [],
     createdAt: '2022-09-22T10:06:55.588Z',
@@ -62,8 +62,12 @@ describe('asyncPopulateUsersAndTalks thunk', () => {
 
     // assert
     expect(dispatch).toHaveBeenCalledWith(showLoading());
-    expect(dispatch).toHaveBeenCalledWith(receiveTalksActionCreator(fakeTalksResponse));
-    expect(dispatch).toHaveBeenCalledWith(receiveUsersActionCreator(fakeUsersResponse));
+    expect(dispatch).toHaveBeenCalledWith(
+      receiveTalksActionCreator(fakeTalksResponse)
+    );
+    expect(dispatch).toHaveBeenCalledWith(
+      receiveUsersActionCreator(fakeUsersResponse)
+    );
     expect(dispatch).toHaveBeenCalledWith(hideLoading());
   });
 
